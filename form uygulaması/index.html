@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container{
+            width: 100%;
+            height: 950px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #B2EBE8;
+            
+            
+            
+        }
+        #formdiv{
+            
+            width: 700px;
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #B2EBE8;
+            border-radius: 700px;
+            box-shadow: 2px 2px 5px gray;
+            
+            
+        }
+        .input1{
+            width: 200px;
+            height: 25px;
+            border-radius: 25px;
+            border: 1px solid #B0F7DA;
+        }
+        #input2{
+            width: 100px;
+            height: 25px;
+            border-radius: 25px;
+            background-color: black;
+            color: white;
+        }
+        img{
+          position: absolute;
+          top: 350px;
+          right: 1000px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div id="formdiv">
+
+            <img id="img" src="vpn_key_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            <form onsubmit="return sifredogrula()">
+                
+                <input class="input1" name="password" type="password" value="şifrenizi giriniz...">
+                <br><br>
+                <input class="input1" name="repassword" type="password" value="şifrenizi tekrar giriniz...">
+                <br><br>
+                <input  id="input2" type="submit" value="Kayıt ol">
+                
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function sifredogrula(){
+            var pass=document.getElementsByName("password")[0];
+            var repass=document.getElementsByName("repassword")[0];
+            
+            
+            if(  pass.value!="" & repass.value!=""){
+                if(pass.value==repass.value){
+                alert("kaydınız tamamlandı")
+                return true;
+                
+                }
+            }
+                
+                alert("girilen şifreler eşleşmedi veya şifre girmediniz!");
+                return false;
+
+
+                }
+               
+
+
+       </script>
+
+</body>
+</html>
